@@ -1,0 +1,6 @@
+.DS_Store
+.idea
+*.log
+*.psd
+*.sublime*
+Thumbs.db
