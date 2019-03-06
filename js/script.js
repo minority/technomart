@@ -11,17 +11,6 @@ $(document).ready(function () {
         nextArrow: $('.stock-slider-next')
     });
 
-    $('.product-item').hover(
-        function () {
-            $(this).find('img').hide();
-            $(this).find('.product-actions').show();
-        },
-        function () {
-            $(this).find('img').show();
-            $(this).find('.product-actions').hide();
-        }
-    );
-
     $('.service-tab').click(function () {
         var selectedTab = $(this).data('tab');
         var selectedElement = $('.service-content-' + selectedTab);
@@ -31,13 +20,6 @@ $(document).ready(function () {
 
         $('.service-tab').removeClass('active-tab');
         $(this).addClass('active-tab');
-    });
-
-    //search color, :focus-within not working ie
-    $('.search-input').focusin(function () {
-        $('.search-form label').removeClass('search-label').addClass("search-label-red");
-    }).focusout(function () {
-        $('.search-form label').removeClass('search-label-red').addClass("search-label");
     });
 
     $('.modal-close').click(function () {
