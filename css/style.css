@@ -26,6 +26,7 @@ a {
 
 .button {
   font: inherit;
+  font-family: "Cuprum", Arial, sans-serif;
   text-align: center;
   color: #ffffff;
   font-size: 14px;
@@ -203,9 +204,17 @@ a {
   background: url('../img/sprite.png') no-repeat -20px -19px;
 }
 
+.bookmark:active:before {
+  background: url('../img/sprite.png') no-repeat -20px 0;
+}
+
 .basket:hover::before,
 .basket:focus::before {
   background: url('../img/sprite.png') no-repeat -36px -20px;
+}
+
+.basket:active::before {
+  background: url('../img/sprite.png') no-repeat -36px 0;
 }
 
 .bookmark:active,
@@ -485,7 +494,7 @@ a {
 .flag-new:before {
   content: '';
   height: 59px;
-  width: 60px;
+  width: 59px;
   position: absolute;
   background: url('../img/sprite.png') no-repeat -28px -140px;
   right: 0;
@@ -596,11 +605,25 @@ a {
 }
 
 .product-actions .button-buy {
+  position: relative;
   background-color: #63a63e;
   border-bottom: 3px solid #367315;
-  padding: 6px 42px 6px;
+  padding: 7px 42px 5px;
   margin-bottom: 10px;
-  cursor: pointer;
+}
+
+.product-actions .button-buy:before {
+  content: '';
+  position: absolute;
+  background: url("../img/sprite.png") no-repeat -36px 0;
+  width: 15px;
+  height: 15px;
+  top: 11px;
+  left: 12px;
+}
+
+.product-actions .button-buy:hover::before {
+  background: url("../img/sprite.png") no-repeat -36px -20px;
 }
 
 .product-actions .button-buy:hover,
@@ -956,10 +979,12 @@ a {
 
 .footer-navigation-top a:active {
   color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
 }
 
 .footer-navigation-bottom a:active {
   color: rgba(255, 209, 128, 0.5);
+  text-decoration: none;
 }
 
 .bottom-footer {
@@ -978,8 +1003,14 @@ a {
   color: #ffd180;
 }
 
+.bottom-footer a:hover,
+.bottom-footer a:focus {
+  text-decoration: underline;
+}
+
 .bottom-footer a:active {
   color: #ee3643;
+  text-decoration: none;
 }
 
 .footer-copyright {
